@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* 👇 Main Background (Creamy White) */
+    background-color: #F2F0EB;
+    
+    /* 👇 Organic Warm Atmosphere */
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(216, 195, 184, 0.4) 0px, transparent 50%), /* Dusty Rose Top Left */
+      radial-gradient(at 100% 100%, rgba(107, 91, 82, 0.1) 0px, transparent 50%); /* Muted Brown Bottom Right */
+      
+    @apply text-brand-text min-h-screen font-sans antialiased selection:bg-brand-accent selection:text-white;
+    background-attachment: fixed;
+  }
+}
+
+/* 👇 Glass Effect (Warm Tint) */
+.glass-panel {
+  @apply bg-brand-bg/60 backdrop-blur-xl border border-brand-primary/50 shadow-warm;
+}
+
+/* 👇 Organic Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F2F0EB;
+}
+::-webkit-scrollbar-thumb {
+  background: #6B5B52; /* Muted Brown Thumb */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3E2723; /* Coffee Brown Hover */
+}
